@@ -11,16 +11,18 @@ const func = async ({ getNamedAccounts, deployments }) => {
   });
   console.log("SampleNFT deployed to:", sampleNFT.address);
 
-  await execute(
-    "JapanSuperSmartNFT",
-    {
-      from: deployer,
-      contract: "JapanSuperSmartNFT",
-      log: true,
-    },
-    "mint",
-    deployer
-  );
+  if (sampleNFT.newlyDeployed) {
+    await execute(
+      "JapanSuperSmartNFT",
+      {
+        from: deployer,
+        contract: "JapanSuperSmartNFT",
+        log: true,
+      },
+      "mint",
+      deployer
+    );
+  }
 };
 
 module.exports = func;

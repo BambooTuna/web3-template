@@ -9,12 +9,6 @@
   },
   "hosting": {
     "public": "projects/app/public",
-    "rewrites": [
-      {
-        "source": "**/**",
-        "function": "next-hosting"
-      }
-    ],
     "ignore": [
       "firebase.json",
       "**/.*",

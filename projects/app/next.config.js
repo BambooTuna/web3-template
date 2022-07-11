@@ -4,4 +4,5 @@ module.exports = {
     alchemyKey: process.env.ALCHEMY_KEY,
     magicKey: process.env.MAGIC_KEY,
   },
+  exportTrailingSlash: true,
 };
